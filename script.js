@@ -62,26 +62,5 @@ function createParticle() {
   }, 12000);
 }
 
-// FORM SUBMISSION
-document
-  .getElementById("whatsappForm")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    const whatsappMessage = `Hello, my name is ${name}.\nSubject: ${subject}\nEmail: ${email}\n\n${message}`;
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const phoneNumber = "2349017134882"; // Nigerian format without +
-
-    window.open(
-      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
-      "_blank"
-    );
-  });
-
 // Create particles periodically
 setInterval(createParticle, 2000);

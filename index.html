@@ -30,7 +30,17 @@
     <!-- Navigation -->
     <nav>
       <div class="logo">Udofia Daniel Andikan</div>
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="site-nav">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contacts">Contacts</a></li>
@@ -248,7 +258,10 @@
           />
           <p class="resume-fallback">
             Unable to view the PDF?
-            <a href="./resume.pdf" target="_blank">Download it here</a> instead.
+            <a href="./resume.pdf" target="_blank" rel="noopener noreferrer"
+              >Download it here</a
+            >
+            instead.
           </p>
         </div>
       </div>
@@ -318,8 +331,12 @@
               />
               <div class="project-overlay">
                 <div class="project-links">
-                  <a href="#" class="project-link">Private Website</a>
-                  <a href="#" class="project-link">Private Website</a>
+                  <span class="project-link project-link-disabled" aria-disabled="true"
+                    >Private Website</span
+                  >
+                  <span class="project-link project-link-disabled" aria-disabled="true"
+                    >Private Website</span
+                  >
                 </div>
               </div>
             </div>
@@ -705,7 +722,10 @@
           <!-- GUESS MY NUMBER -->
           <div class="project-card">
             <div class="project-image">
-              <img src="./webs-samples/guess-my-number-web.png" />
+              <img
+                src="./webs-samples/guess-my-number-web.png"
+                alt="Guess My Number game interface"
+              />
               <div class="project-overlay">
                 <div class="project-links">
                   <a
@@ -742,7 +762,10 @@
           <!-- PIG GAME -->
           <div class="project-card">
             <div class="project-image">
-              <img src="./webs-samples/pig-game-web.png" />
+              <img
+                src="./webs-samples/pig-game-web.png"
+                alt="Pig Game interface"
+              />
               <div class="project-overlay">
                 <div class="project-links">
                   <a
@@ -846,8 +869,11 @@
               </div>
             </div>
             <div class="project-info">
-              <h3></h3>
-              <p></p>
+              <h3>Array Bankist</h3>
+              <p>
+                A banking app simulation focused on account workflows and core
+                JavaScript array operations.
+              </p>
               <div class="project-tech">
                 <span class="tech-tag">HTML:5</span>
                 <span class="tech-tag">CSS3</span>
@@ -859,7 +885,10 @@
           <!-- MAPTY -->
           <div class="project-card">
             <div class="project-image">
-              <img src="./webs-samples/mapty-web.png" />
+              <img
+                src="./webs-samples/mapty-web.png"
+                alt="Mapty workout tracking interface"
+              />
               <div class="project-overlay">
                 <div class="project-links">
                   <a
@@ -1039,7 +1068,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-left">
-            <p>&copy; 2025 Udofia Daniel Andikan. All rights reserved.</p>
+            <p>&copy; 2026 Udofia Daniel Andikan. All rights reserved.</p>
           </div>
           <div class="footer-right">
             <p>Made with <span class="heart">❤️</span> and lots of coffee</p>

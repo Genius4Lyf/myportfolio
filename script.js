@@ -1,8 +1,18 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href || href === "#") return;
+
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+
+    let target = null;
+    try {
+      target = document.querySelector(href);
+    } catch {
+      return;
+    }
+
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
@@ -12,15 +22,32 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// Mobile navigation toggle
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
 // Dynamic navigation background on scroll
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    nav.style.background = "rgba(26, 26, 46, 0.95)";
-  } else {
-    nav.style.background = "rgba(26, 26, 46, 0.9)";
-  }
-});
+const nav = document.querySelector("nav");
+const setNavBackground = () => {
+  if (!nav) return;
+  nav.style.background =
+    window.scrollY > 50 ? "rgba(26, 26, 46, 0.95)" : "rgba(26, 26, 46, 0.9)";
+};
+window.addEventListener("scroll", setNavBackground, { passive: true });
+setNavBackground();
 
 // Add interactive hover effects to skills
 document.querySelectorAll(".skill").forEach((skill) => {
@@ -36,21 +63,25 @@ document.querySelectorAll(".skill").forEach((skill) => {
 });
 
 // Parallax effect for hero elements
-window.addEventListener("scroll", () => {
-  const scrolled = window.pageYOffset;
-  const parallaxElements = document.querySelectorAll(".deco-arrow");
-  const speed = 0.5;
-
-  parallaxElements.forEach((element) => {
-    const yPos = -(scrolled * speed);
-    element.style.transform += ` translateY(${yPos}px)`;
-  });
-});
+const parallaxElements = document.querySelectorAll(".deco-arrow");
+window.addEventListener(
+  "scroll",
+  () => {
+    const yPos = -(window.pageYOffset * 0.5);
+    parallaxElements.forEach((element) => {
+      const rotate = element.classList.contains("right") ? "135deg" : "-45deg";
+      element.style.transform = `translateY(${yPos}px) rotate(${rotate})`;
+    });
+  },
+  { passive: true }
+);
 
 // Create more dynamic particles
 function createParticle() {
+  if (document.querySelectorAll(".particle.dynamic").length >= 20) return;
+
   const particle = document.createElement("div");
-  particle.className = "particle";
+  particle.className = "particle dynamic";
   particle.style.left = Math.random() * 100 + "%";
   particle.style.animationDuration = Math.random() * 8 + 4 + "s";
   particle.style.animationDelay = Math.random() * 2 + "s";
@@ -62,5 +93,29 @@ function createParticle() {
   }, 12000);
 }
 
-// Create particles periodically
-setInterval(createParticle, 2000);
+// Create particles periodically, pause work in hidden tabs and reduced-motion mode
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+let particleIntervalId = null;
+
+function startParticles() {
+  if (prefersReducedMotion || particleIntervalId) return;
+  particleIntervalId = setInterval(createParticle, 2000);
+}
+
+function stopParticles() {
+  if (!particleIntervalId) return;
+  clearInterval(particleIntervalId);
+  particleIntervalId = null;
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    stopParticles();
+  } else {
+    startParticles();
+  }
+});
+
+startParticles();

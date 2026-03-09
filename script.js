@@ -49,18 +49,7 @@ const setNavBackground = () => {
 window.addEventListener("scroll", setNavBackground, { passive: true });
 setNavBackground();
 
-// Add interactive hover effects to skills
-document.querySelectorAll(".skill").forEach((skill) => {
-  skill.addEventListener("mouseenter", function () {
-    this.style.transform = "scale(1.1) translateY(-5px)";
-    this.style.textShadow = "0 5px 15px rgba(255, 107, 107, 0.3)";
-  });
-
-  skill.addEventListener("mouseleave", function () {
-    this.style.transform = "scale(1) translateY(0)";
-    this.style.textShadow = "none";
-  });
-});
+// Skill hover effects are handled purely in CSS now
 
 // Parallax effect for hero elements
 const parallaxElements = document.querySelectorAll(".deco-arrow");
@@ -119,3 +108,44 @@ document.addEventListener("visibilitychange", () => {
 });
 
 startParticles();
+
+// Back to top button
+const backToTopBtn = document.querySelector(".back-to-top");
+if (backToTopBtn) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      backToTopBtn.classList.toggle("visible", window.scrollY > 400);
+    },
+    { passive: true }
+  );
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// Scroll spy — highlight active nav link
+const sections = document.querySelectorAll("section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a[href^='#']");
+
+if (sections.length && navAnchors.length) {
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -60% 0px",
+    threshold: 0,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        navAnchors.forEach((a) => {
+          a.classList.toggle("active", a.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => observer.observe(section));
+}

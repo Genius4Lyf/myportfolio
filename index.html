@@ -12,10 +12,70 @@
     />
     <title>Udofia Daniel Andikan - Software Developer</title>
 
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Udofia Daniel Andikan — Software Developer specializing in full-stack web development with React, Node.js, and MongoDB. View my projects and get in touch."
+    />
+    <meta
+      name="keywords"
+      content="Udofia Daniel Andikan, Software Developer, Web Developer, Full-Stack, React, Node.js, Portfolio"
+    />
+    <meta name="author" content="Udofia Daniel Andikan" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta
+      property="og:title"
+      content="Udofia Daniel Andikan - Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="Full-stack web developer specializing in React, Node.js, and MongoDB. Explore my projects, certifications, and get in touch."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./webs-samples/logo-lightning.svg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Udofia Daniel Andikan - Software Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-stack web developer specializing in React, Node.js, and MongoDB."
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Udofia Daniel Andikan",
+        "jobTitle": "Software Developer",
+        "url": "",
+        "email": "udofiadaniel07@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Port Harcourt",
+          "addressRegion": "Rivers",
+          "addressCountry": "NG"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/daniel-udofia-271941254/",
+          "https://github.com/Genius4Lyf",
+          "https://x.com/DannyKings11"
+        ]
+      }
+    </script>
+
     <script defer src="script.js"></script>
   </head>
 
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#home" class="skip-to-content">Skip to content</a>
+
     <!-- Background Particles -->
     <div class="particle" style="left: 10%; animation-delay: -2s"></div>
     <div class="particle" style="left: 20%; animation-delay: -4s"></div>
@@ -67,7 +127,7 @@
           <div class="circle-bg"></div>
           <img
             src="./webs-samples/logo-lightning.svg"
-            alt="Jensen Omega"
+            alt="Udofia Daniel Andikan"
             class="profile-image"
           />
         </div>
@@ -440,6 +500,7 @@
               <img
                 src="./certificates/HTML-CSS CERTIFICATE.jpg"
                 alt="HTML & CSS Certification"
+                loading="lazy"
               />
               <div class="cert-overlay">
                 <span class="cert-title">HTML & CSS</span>
@@ -451,6 +512,7 @@
               <img
                 src="./certificates/JAVASCRIPT CERTIFICATE.jpg"
                 alt="JavaScript Certification"
+                loading="lazy"
               />
               <div class="cert-overlay">
                 <span class="cert-title">JavaScript</span>
@@ -462,6 +524,7 @@
               <img
                 src="./certificates/NODE JS CERTIFICATE.jpg"
                 alt="Node.js Certification"
+                loading="lazy"
               />
               <div class="cert-overlay">
                 <span class="cert-title">Node.js</span>
@@ -473,6 +536,7 @@
               <img
                 src="./certificates/GIT HUB CERTIFICATE.jpg"
                 alt="GitHub Certification"
+                loading="lazy"
               />
               <div class="cert-overlay">
                 <span class="cert-title">Git & GitHub</span>
@@ -494,6 +558,7 @@
               <img
                 src="./webs-samples/applyright-web.jpeg"
                 alt="ApplyRight Web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -523,7 +588,7 @@
                 optimization, tailored cover letter generation, and interview
                 preparation tools.
                 <br />
-                <span style="font-size: 0.9em; opacity: 0.9; font-style: italic"
+                <span class="project-collab-note"
                   >Developed in collaboration with Google Antigravity.</span
                 >
               </p>
@@ -544,6 +609,7 @@
               <img
                 src="./webs-samples/fieldtracker-web.jpeg"
                 alt="Field Tracker Web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -573,7 +639,7 @@
                   ></small
                 >
                 <br />
-                <small style="color: var(--primary-color); opacity: 0.8"
+                <small class="project-nda-note"
                   ><em
                     >* Internal tool protected by NDA. Live demo not
                     available.</em
@@ -598,7 +664,7 @@
           <!-- OPSLINE WEB TOOL -->
           <div class="project-card">
             <div class="project-image">
-              <img src="./webs-samples/Opsline.png" alt="Opsline Web view" />
+              <img src="./webs-samples/Opsline.png" alt="Opsline Web view" loading="lazy" />
               <div class="project-overlay">
                 <div class="project-links">
                   <a
@@ -625,7 +691,7 @@
                 operators in their ongoing learning and operational readiness.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">CSS3</span>
               </div>
@@ -639,6 +705,7 @@
               <img
                 src="./webs-samples/vibenotes-web.jpeg"
                 alt="VibeNotes App Interface"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -691,6 +758,7 @@
               <img
                 src="./webs-samples/testify-web.jpeg"
                 alt="Testify Web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -739,7 +807,8 @@
             <div class="project-image">
               <img
                 src="./webs-samples/scent-by-mena.png"
-                alt="Scent by mena web view"
+                alt="Scent by Mena web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -764,10 +833,10 @@
               <h3>Scent By Mena</h3>
               <p>
                 A full-stack e-commerce solution built with HTML, CSS,
-                JavaScript Node.js, Express.js and MongoDB with Mongoose
+                JavaScript, Node.js, Express.js and MongoDB with Mongoose
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">Node.js</span>
@@ -784,6 +853,7 @@
               <img
                 src="./webs-samples/omnifood-web.png"
                 alt="Omnifood web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -812,7 +882,7 @@
                 daily meal delivery, personalized plans, and various recipes.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
               </div>
             </div>
@@ -824,6 +894,7 @@
               <img
                 src="./webs-samples/node-farm-web.png"
                 alt="Node Farm Web View"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -864,6 +935,7 @@
               <img
                 src="./webs-samples/natours-web.png"
                 alt="Natours Web View"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -908,6 +980,7 @@
               <img
                 src="./webs-samples/guess-my-number-web.png"
                 alt="Guess My Number game interface"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -935,7 +1008,7 @@
                 straightforward browser game.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -948,11 +1021,12 @@
               <img
                 src="./webs-samples/pig-game-web.png"
                 alt="Pig Game interface"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
                   <a
-                    href="https://github.com/Genius4Lyf/pig-game"
+                    href="https://genius4lyf.github.io/pig-game/"
                     class="project-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -976,7 +1050,7 @@
                 points, trying to be the first to reach a target score.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -989,6 +1063,7 @@
               <img
                 src="./webs-samples/bankist-web.png"
                 alt="Bankist web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -1017,7 +1092,7 @@
                 minimalist bank.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -1029,7 +1104,8 @@
             <div class="project-image">
               <img
                 src="./webs-samples/array-bankist-web.png"
-                alt="array-bankist web"
+                alt="Array Bankist web view"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -1058,7 +1134,7 @@
                 JavaScript array operations.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -1071,6 +1147,7 @@
               <img
                 src="./webs-samples/mapty-web.png"
                 alt="Mapty workout tracking interface"
+                loading="lazy"
               />
               <div class="project-overlay">
                 <div class="project-links">
@@ -1082,7 +1159,7 @@
                     >View Live</a
                   >
                   <a
-                    href="https://github.com/Genius4Lyf/myportfolio"
+                    href="https://github.com/Genius4Lyf/mapty"
                     class="project-link"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1098,7 +1175,7 @@
                 exercises on the map, whether running or cycling.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -1120,7 +1197,7 @@
               <h3></h3>
               <p></p>
               <div class="project-tech">
-                <span class="tech-tag">HTML:5</span>
+                <span class="tech-tag">HTML5</span>
                 <span class="tech-tag">CSS3</span>
                 <span class="tech-tag">JavaScript</span>
               </div>
@@ -1143,7 +1220,7 @@
           <div class="contact-info">
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10Z"
                     stroke="#ff6b6b"
@@ -1160,7 +1237,7 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6Z"
                     stroke="#ff6b6b"
@@ -1177,7 +1254,7 @@
 
             <div class="contact-item">
               <div class="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"
                     stroke="#ff6b6b"
@@ -1197,6 +1274,8 @@
           <a
             href="https://www.linkedin.com/in/daniel-udofia-271941254/"
             class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
@@ -1222,7 +1301,7 @@
             </svg>
             LinkedIn
           </a>
-          <a href="https://github.com/Genius4Lyf" class="social-link">
+          <a href="https://github.com/Genius4Lyf" class="social-link" target="_blank" rel="noopener noreferrer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
@@ -1232,7 +1311,7 @@
             </svg>
             GitHub
           </a>
-          <a href="https://x.com/DannyKings11" class="social-link">
+          <a href="https://x.com/DannyKings11" class="social-link" target="_blank" rel="noopener noreferrer">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path
                 d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3Z"
@@ -1245,6 +1324,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
